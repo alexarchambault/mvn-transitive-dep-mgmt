@@ -1,4 +1,6 @@
 
+See [this issue](https://github.com/lihaoyi/mill/pull/941) for context.
+
 Project `main` depends on `shapeless_2.13` (see `main/pom.xml`), which pulls `scala-library:2.13.0`. But the dependency management section of its parent has `scala-library:2.11.12` (see `pom.xml` at the root), so the latter version is actually pulled:
 ```text
 $ mvn dependency:build-classpath
